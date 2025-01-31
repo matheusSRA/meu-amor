@@ -1,0 +1,104 @@
+/* Adicionando box-sizing universal para evitar que padding ou borda afetem a largura */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+    background-color: rgb(24, 1, 41);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%; /* Garante que o container ocupe toda a altura da tela */
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+#escolha {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background-color: #0e0e13;
+    padding: 50px;
+    border-radius: 20px;
+    width: 100%; /* Ajusta para 100% da largura disponível */
+    max-width: 600px; /* Limita a largura para telas grandes */
+    box-sizing: border-box;
+    overflow-y: auto; /* Permite rolar se necessário */
+}
+
+#cafe p, #fast p, #cine p, #tempo p {
+    background-color: #04106e;
+    padding: 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    width: 100%; /* Ajusta para 100% da largura disponível */
+    max-width: 350px; /* Limita a largura das opções */
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+#cafe p:hover, #fast p:hover, #cine p:hover, #tempo p:hover {
+    background-color: #3b4abe;
+}
+
+/* Media Query para telas menores que 768px */
+@media screen and (max-width: 768px) {
+    #container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #escolha {
+        width: 90%; /* Ajusta a largura do container em telas pequenas */
+        padding: 30px;
+    }
+
+    #cafe p, #fast p, #cine p, #tempo p {
+        width: 90%; /* Faz com que as opções ocupem mais largura em telas menores */
+        padding: 40px;
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+/* Media Query para telas muito pequenas (como smartphones verticais) */
+@media screen and (max-width: 480px) {
+    #cafe p, #fast p, #cine p, #tempo p {
+        width: 95%; /* As opções ocupam quase toda a largura da tela */
+        padding: 30px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,112 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(24, 1, 41);
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    margin: 0;
+    overflow-x: hidden; /* Impede o excesso de rolagem horizontal */
+}
+
+#contador {
+    display: flex;
+    flex-direction: column; /* Coloca os itens na coluna */
+    align-items: center; /* Alinha os itens no centro */
+    gap: 30px; /* Espaçamento entre as caixas */
+    color: white;
+    background-color: #1a0b3e94;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    border: 3px solid #2d006d; /* Borda roxa */
+    text-align: center;
+    width: 80%; /* Altera para 80% da largura da tela */
+    max-width: 900px; /* Limite de largura para telas grandes */
+    box-sizing: border-box; /* Garante que padding não ultrapasse a largura */
+}
+
+#contador .caixa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #360976; /* Cor roxa para as caixas */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Caixa ocupa 100% da largura disponível */
+    max-width: 350px; /* Limita a largura das caixas */
+    border: 3px solid #2d006d;
+    box-sizing: border-box; /* Evita que a largura seja ultrapassada */
+}
+
+#contador .caixa p {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+#contador .caixa span {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.h1 {
+    color: #ffffff; /* Cor roxa mais clara para o título */
+    margin-bottom: 20px;
+    margin-top: 60px;
+    font-size: 36px;
+}
+
+h1, #contador {
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+h1:hover, #contador:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Media Query para telas menores que 768px */
+@media (max-width: 768px) {
+    #contador {
+        width: 80%; /* O contador ocupa 80% da largura da tela em dispositivos menores */
+        padding: 20px;
+    }
+
+    #contador .caixa {
+        width: 100%; /* Cada caixa ocupa 100% da largura em telas menores */
+        padding: 15px; /* Menos padding nas caixas */
+        max-width: 100%; /* Garantir que não ultrapasse a tela */
+    }
+
+    #contador .caixa span {
+        font-size: 28px; /* Menor fonte para se ajustar ao tamanho da tela */
+    }
+
+    .h1 {
+        font-size: 28px; /* Reduz o tamanho do título em telas menores */
+    }
+}
+
+/* Media Query para telas menores que 480px */
+@media (max-width: 480px) {
+    #contador {
+        width: 90%; /* O contador ocupa 90% da largura da tela */
+        padding: 15px;
+    }
+
+    #contador .caixa {
+        width: 100%; /* As caixas ocupam 100% da largura da tela */
+        padding: 12px; /* Menos padding para se ajustar em telas pequenas */
+    }
+
+    #contador .caixa span {
+        font-size: 24px; /* Fontes ainda menores para dispositivos muito pequenos */
+    }
+
+    .h1 {
+        font-size: 24px; /* Título menor para telas muito pequenas */
+    }
+}

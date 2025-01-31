@@ -1,0 +1,41 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(24, 1, 41);
+    padding: 20px;
+  }
+  
+  /* Estilo do título */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  /* Contêiner do álbum */
+  .album-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Quadros maiores */
+    gap: 15px; /* Espaço entre os quadros */
+  }
+  
+  /* Estilo das imagens */
+  .album-container img {
+    width: 100%;
+    height: 350px; /* Quadros mais altos */
+    object-fit: cover; /* Ajusta a imagem para preencher o quadro */
+    border-radius: 10px; /* Bordas mais arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+    transition: transform 0.3s;
+  }
+  
+  .album-container img:hover {
+    transform: scale(1.30); /* Efeito de zoom */
+  }
+  

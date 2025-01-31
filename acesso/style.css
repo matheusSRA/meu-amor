@@ -1,0 +1,139 @@
+body {
+    background-color: rgb(24, 1, 41);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    user-select: none;
+    margin: 0;
+    overflow-x: hidden; /* Evita a rolagem horizontal */
+    padding: 0;
+}
+
+.container-login {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh;
+    width: 100%;
+    padding: 20px; /* Adiciona um pequeno padding para que o conteúdo não fique colado nas bordas */
+    box-sizing: border-box;
+}
+
+.login {
+    background-color: #050404;
+    padding: 50px;
+    border-radius: 20px; /* Torna as bordas um pouco menos arredondadas para um visual mais suave */
+    width: 100%; /* Permite que o login ocupe toda a largura disponível */
+    max-width: 450px; /* Limita a largura para telas maiores */
+    box-sizing: border-box;
+    overflow: hidden; /* Evita a rolagem interna no formulário */
+}
+
+#profile {
+    text-align: center;
+}
+
+#profile img {
+    width: 150px; /* Reduz o tamanho da imagem para garantir que se ajuste melhor em dispositivos pequenos */
+    border-radius: 50%; /* Torna a imagem redonda */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#sucesso, #preencha, #negado {
+    display: none;
+    text-align: center;
+}
+
+input {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #252A34;
+    border: none;
+    height: 45px;
+    border-radius: 8px;
+    color: #CBD0F7;
+    padding-left: 2%;
+}
+
+input:focus {
+    outline: 2px solid #CBD0F7;
+}
+
+input::placeholder {
+    color: #CBD0F7;
+}
+
+form [type="submit"] {
+    display: block;
+    background-color: #5568FE;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    padding: 12px;
+    border-radius: 8px; /* Deixa o botão um pouco arredondado */
+}
+
+form [type="submit"]:hover {
+    background-color: #3b4abe;
+}
+
+p {
+    color: #CBD0F7;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #5568FE;
+}
+
+/* Media Query para telas menores que 768px */
+@media screen and (max-width: 768px) {
+    .container-login {
+        flex-direction: column; /* Coloca os itens na vertical */
+        padding: 10px; /* Ajusta o padding para telas menores */
+    }
+
+    .login {
+        padding: 30px; /* Menos padding nas telas menores */
+        max-width: 100%; /* O login ocupa 100% da tela em dispositivos pequenos */
+    }
+
+    #profile img {
+        width: 120px; /* Reduz ainda mais o tamanho da imagem para dispositivos móveis */
+    }
+
+    input {
+        font-size: 16px; /* Ajusta o tamanho da fonte para que se ajuste melhor em telas pequenas */
+    }
+
+    form [type="submit"] {
+        font-size: 18px; /* Reduz o tamanho do botão em dispositivos pequenos */
+    }
+}
+
+/* Media Query para telas muito pequenas (como smartphones verticais) */
+@media screen and (max-width: 480px) {
+    .container-login {
+        padding: 10px; /* Diminui o padding em dispositivos muito pequenos */
+    }
+
+    .login {
+        padding: 20px; /* Menos padding para otimizar o espaço */
+    }
+
+    input {
+        font-size: 14px; /* Fontes ainda menores em telas pequenas */
+        height: 40px; /* Menor altura nos inputs para caber melhor em telas pequenas */
+    }
+
+    form [type="submit"] {
+        font-size: 16px; /* Tamanho do botão ainda menor em telas muito pequenas */
+    }
+}
